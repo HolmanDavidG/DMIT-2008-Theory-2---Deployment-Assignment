@@ -10,4 +10,15 @@ const WeatherCard = () => {
             const city = "Edmonton";
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
-            
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error("Weather data fetch failed");
+                const data = await response.json();
+                setWeather(data);
+            } catch (err) {
+                setError(err.message);
+            }
+        };
+        fetchWeather();
+    }, []);
+
