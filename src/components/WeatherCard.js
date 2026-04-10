@@ -22,3 +22,16 @@ const WeatherCard = () => {
         fetchWeather();
     }, []);
 
+    if (error) return <div className="p-4 border rounded shadow">Error: {error}</div>;
+    if (!weather) return <div className="p-4 border rounded shadow">Loading Edmonton Weather...</div>;
+
+    return (
+        <div className="p-4 border rounded shadow-md bg-white dark:bg-gray-800">
+            <h3 className="text-lg font-bold">Edmonton Weather</h3>
+            <p className="text-2xl font-semibold">{Math.round(weather.main.temp)}°C</p>
+            <p className="capitalize text-gray-600 dark:text-gray-400">{weather.weather[0].description}</p>
+        </div>
+    );
+};
+
+export default WeatherCard;
