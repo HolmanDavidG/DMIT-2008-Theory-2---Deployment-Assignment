@@ -10,7 +10,10 @@
     "start": "next start",
     "lint": "eslint",
     "unocss:build": "unocss \"src/**/*.{js,jsx,ts,tsx}\" --config unocss.config.js -o src/styles/unocss.css",
-    "unocss:watch": "unocss \"src/**/*.{js,jsx,ts,tsx}\" --config unocss.config.js -w -o src/styles/unocss.css"
+    "unocss:watch": "unocss \"src/**/*.{js,jsx,ts,tsx}\" --config unocss.config.js -w -o src/styles/unocss.css",
+    "test": "vitest run",
+    "test:watch": "vitest"
+
   },
   "dependencies": {
     "dayjs": "1.11.19",
