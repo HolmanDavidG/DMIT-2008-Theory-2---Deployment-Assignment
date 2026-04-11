@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { expect, test } from 'vitest';
+import '@testing-library/jest-dom/vitest';
 import WeatherCard from './WeatherCard';
 
 test('renders the weather card heading', () => {
