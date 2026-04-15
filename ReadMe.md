@@ -1,6 +1,6 @@
 # Theory 2
 
-> Student Name: **YOUR_NAME**
+> Student Name: **Holman Gonzalez - HolmanDavidG**
 
 ![Website Screenshot](./docs/images/preview.png)
 
